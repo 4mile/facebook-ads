@@ -19,16 +19,16 @@ with base as (
         nullif(campaign_id,'') as campaign_id,
         impressions,
         clicks,
-        unique_clicks,
+        --unique_clicks,
         spend,
-        frequency,
+        --frequency,
         reach,
-        nullif(objective,'') as objective,
+        --nullif(objective,'') as objective,
         canvas_avg_view_percent,
-        canvas_avg_view_time,
+        --canvas_avg_view_time,
         inline_link_clicks,
-        inline_post_engagement,
-        unique_inline_link_clicks,
+        --inline_post_engagement,
+        --unique_inline_link_clicks,
         row_number() over (partition by date_day, ad_id order by _FIVETRAN_SYNCED desc) as row_num
 
     from
